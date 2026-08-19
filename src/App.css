@@ -826,3 +826,137 @@ section {
   margin-top: 2.5rem;
   grid-template-columns: 1fr;
 }
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+  min-height: 80vh;
+
+  display: flex;
+  align-items: center;
+
+  padding: 7rem 8%;
+
+  background: #f8f7f4;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact .section-heading {
+  margin-bottom: 4rem;
+}
+
+.contact .section-heading p {
+  margin-bottom: 1rem;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  opacity: 0.5;
+}
+
+.contact .section-heading h2 {
+  max-width: 800px;
+
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 0.95;
+
+  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.contact-content {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 6rem;
+
+  max-width: 1100px;
+}
+
+.contact-intro {
+  max-width: 550px;
+}
+
+.contact-intro p {
+  margin-bottom: 1.5rem;
+
+  font-size: 1rem;
+  line-height: 1.8;
+
+  opacity: 0.7;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-links a {
+  display: flex;
+  flex-direction: column;
+
+  padding: 1.25rem 0;
+
+  border-top: 1px solid rgba(26, 26, 26, 0.15);
+
+  transition:
+    padding-left 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.contact-links a:last-child {
+  border-bottom: 1px solid rgba(26, 26, 26, 0.15);
+}
+
+.contact-links a:hover {
+  padding-left: 0.5rem;
+}
+
+.contact-links span {
+  margin-bottom: 0.4rem;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  opacity: 0.45;
+}
+
+.contact-links strong {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 700px) {
+  .contact {
+    min-height: auto;
+
+    padding: 6rem 6%;
+  }
+
+  .contact .section-heading {
+    margin-bottom: 3rem;
+  }
+
+  .contact .section-heading h2 {
+    font-size: 3rem;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+}

@@ -25,7 +25,16 @@ function Hero() {
           </a>
 
           <a href="#contact" className="button button-secondary">
-            Get In Touch
+            Contact Me
+          </a>
+
+          <a
+            href="/documents/Siti-Nurhazwani-CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="button button-secondary"
+          >
+            View CV
           </a>
         </div>
       </div>
