@@ -11,7 +11,7 @@
 
   padding: 0 6%;
 
-  background: rgba(248, 247, 244, 0.9);
+  background: rgba(var(--bg-rgb), 0.9);
   backdrop-filter: blur(10px);
 
   z-index: 1000;
@@ -26,6 +26,34 @@
 .navbar-links {
   display: flex;
   gap: 2rem;
+}
+
+.theme-toggle {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid currentColor;
+  border-radius: 50%;
+
+  background: transparent;
+  color: inherit;
+
+  cursor: pointer;
+
+  font-size: 0.9rem;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.theme-toggle:hover {
+  transform: rotate(15deg);
 }
 
 .navbar-links a {
@@ -134,7 +162,7 @@ section {
   min-height: 48px;
   padding: 0 1.5rem;
 
-  border: 1px solid #1a1a1a;
+  border: 1px solid var(--text);
 
   font-size: 0.9rem;
   font-weight: 600;
@@ -150,23 +178,23 @@ section {
 }
 
 .button-primary {
-  background: #1a1a1a;
-  color: #f8f7f4;
+  background: var(--text);
+  color: var(--background);
 }
 
 .button-primary:hover {
   background: transparent;
-  color: #1a1a1a;
+  color: var(--text);
 }
 
 .button-secondary {
   background: transparent;
-  color: #1a1a1a;
+  color: var(--text);
 }
 
 .button-secondary:hover {
-  background: #1a1a1a;
-  color: #f8f7f4;
+  background: var(--text);
+  color: var(--background);
 }
 
 /* =========================
@@ -182,7 +210,7 @@ section {
 }
 
 .deco-circle {
-  border: 1px solid rgba(26, 26, 26, 0.25);
+  border: 1px solid rgba(var(--text-rgb), 0.25);
   border-radius: 50%;
 
   display: flex;
@@ -214,7 +242,7 @@ section {
   top: 130px;
   left: 100px;
 
-  border-color: rgba(26, 26, 26, 0.3);
+  border-color: rgba(var(--text-rgb), 0.3);
 }
 
 .deco-circle-3 {
@@ -501,7 +529,7 @@ section {
 
   padding-bottom: 5rem;
 
-  border-bottom: 1px solid rgba(26, 26, 26, 0.15);
+  border-bottom: 1px solid var(--border);
 }
 
 .project-card:last-child {
@@ -808,7 +836,7 @@ section {
   margin-top: 2rem;
   padding-top: 2rem;
 
-  border-top: 1px solid rgba(26, 26, 26, 0.15);
+  border-top: 1px solid var(--border);
 }
 
 /* Penguin-Seal Shooter + Candy Kingdom */
@@ -839,7 +867,7 @@ section {
 
   padding: 7rem 8%;
 
-  background: #f8f7f4;
+  background: var(--background);
 }
 
 .contact-container {
@@ -907,7 +935,7 @@ section {
 
   padding: 1.25rem 0;
 
-  border-top: 1px solid rgba(26, 26, 26, 0.15);
+  border-top: 1px solid var(--border);
 
   transition:
     padding-left 0.25s ease,
@@ -915,7 +943,7 @@ section {
 }
 
 .contact-links a:last-child {
-  border-bottom: 1px solid rgba(26, 26, 26, 0.15);
+  border-bottom: 1px solid var(--border);
 }
 
 .contact-links a:hover {

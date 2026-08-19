@@ -8,10 +8,30 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --background: #f8f7f4;
+  --text: #1a1a1a;
+  --text-rgb: 26, 26, 26;
+  --bg-rgb: 248, 247, 244;
+  --border: rgba(26, 26, 26, 0.15);
+}
+
 body {
   font-family: Arial, sans-serif;
-  background: #f8f7f4;
-  color: #1a1a1a;
+  background: var(--background);
+  color: var(--text);
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+body.dark {
+  --background: #1a1a1a;
+  --text: #f8f7f4;
+  --text-rgb: 248, 247, 244;
+  --bg-rgb: 26, 26, 26;
+  --border: rgba(248, 247, 244, 0.15);
 }
 
 a {
